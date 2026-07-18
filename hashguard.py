@@ -22,7 +22,10 @@ def create_baseline(directory):
     for root, _, files in os.walk(directory):
         for name in files:
             path = os.path.join(root, name)
-            baseline[path] = compute_sha256(path)
+            baseline[path] = {
+    "hash": compute_sha256(path),
+    "size": os.path.getsize(path),
+}
     with open(BASELINE_FILE, "w") as f:
         json.dump(baseline, f, indent=2)
     print(f"Baseline created: {len(baseline)} files hashed.")
@@ -48,7 +51,7 @@ def check_integrity(directory):
 
             if path not in baseline:
                 new.append(path)
-            elif baseline[path] != current_hash:
+            elif baseline[path]["hash"] != current_hash:
                 tampered.append(path)
 
     missing = [p for p in baseline if p not in current_files]
