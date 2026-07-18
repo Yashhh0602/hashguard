@@ -1,5 +1,14 @@
 {
-  "test_files\\file1.tx": "ba84674cec063eb079238d8870b0bfbd5a7b455581bbb61874b41d1be8159f60",
-  "test_files\\file1.txt": "654b93f61054e4ce90ed203bb8d556a6200d5f906cf3eca0620738d6dc18cbed",
-  "test_files\\file2.txt": "0c3e69d5b49d84ea2e703199edd8aa7b28f98e344aa4c1b3de4d14115489d662"
+  "test_files\\file1.tx": {
+    "hash": "ba84674cec063eb079238d8870b0bfbd5a7b455581bbb61874b41d1be8159f60",
+    "size": 38
+  },
+  "test_files\\file1.txt": {
+    "hash": "ba84674cec063eb079238d8870b0bfbd5a7b455581bbb61874b41d1be8159f60",
+    "size": 38
+  },
+  "test_files\\file2.txt": {
+    "hash": "0c3e69d5b49d84ea2e703199edd8aa7b28f98e344aa4c1b3de4d14115489d662",
+    "size": 30
+  }
 }
